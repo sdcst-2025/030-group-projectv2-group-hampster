@@ -28,10 +28,12 @@ def rectangle():
             if choice > 0 and choice < 4:
                 picked = 1
             else:
-                print(' ')
+                os.system('cls')
+                print('You didn\'t select an option.')
         except:
+            os.system('cls')
             print('You didn\'t select an option.')
-        
+
     os.system('cls')
 
 
