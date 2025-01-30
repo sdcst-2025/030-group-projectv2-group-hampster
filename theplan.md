@@ -11,7 +11,7 @@ List of calculators:
     volume rectangular prism - Lucas
     compound interest w/ reacuring input - Finlay
     simple interest with reacurring input - Lucas
-    loan with compound interest interest and reacurring payment - Last person
+    loan with compound interest interest and reacurring payment - Last person or Wim
     basic derivative calculator - Lucas
     Best price calculator - Finlay
     Gravitation time dilation calculator - Lucas
