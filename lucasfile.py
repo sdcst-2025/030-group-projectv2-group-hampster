@@ -17,6 +17,7 @@ List of calculators:
 import os, math
 
 def rectangle():
+    os.system('cls')
     picked = 0
     while picked == 0:
         print('-------------------------\nPlease make a selection: \n-------------------------')
@@ -27,19 +28,29 @@ def rectangle():
             choice = int(input(""))
             if choice > 0 and choice < 4:
                 picked = 1
+                os.system('cls')
             else:
                 os.system('cls')
                 print('You didn\'t select an option.')
         except:
             os.system('cls')
             print('You didn\'t select an option.')
-
+    if choice == 1:
+        s1 = float(input("Enter the given side: "))
+        area = float(input("Enter the area: "))
+        ans = area/s1
+    if choice == 2:
+        s1 = float(input("Enter first side: "))
+        s2 = float(input("Enter second side: "))
+        ans = (s1*2)+(s2*2)
+    if choice == 3:
+        s1 = float(input("Enter first side: "))
+        s2 = float(input("Enter second side: "))
+        ans = s1*s2
     os.system('cls')
+    ans = round(ans, 2)
+    print(f"The answer is {ans}.")
+    return
 
-
-
-
-
-
+def volsphere()
 if __name__ == "__main__":
-    rectangle()
