@@ -13,7 +13,8 @@ List of calculators:
     Best price calculator - Finlay
     Gravitation time dilation calculator - Lucas
     Escape velocity calculator - Finlay
-'''
+    cylinder - Lucas
+    '''
 import os, math
 
 def rectangle():
@@ -124,11 +125,34 @@ def rectangularprism():
     print(f"The answer is {ans}.")
     return
 
+def cylinder():
+    #DO ME NOW!
+    #IM NOT DONE YET
+    #DO IT
 
-        
+def simpleinterest():
+    os.system('cls')
+    while picked = 0
+        os.system('cls')
+        print("-------------------------\nSimple Interest Calculator\n-------------------------")
+        try:
+            p = float(input("Enter the amount of money: "))
+            r = float(input("Enter the interest rate"))
+            if p > 0 and r > 0:
+                picked = 1
+            else: 
+                print("You didn't enter a valid input.")
+        except:
+            print("You didn't enter a valid input.")
+    
+    ans = round(ans, 2)
+    print(f"The answer is {ans}.")
+    return
+
+
 
 if __name__ == "__main__":
-    rectangularprism()
+    simpleinterest()    
 
 
 '''
