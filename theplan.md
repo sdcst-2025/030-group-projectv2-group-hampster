@@ -16,5 +16,6 @@ List of calculators:
     Best price calculator - Finlay
     Gravitation time dilation calculator - Lucas
     Escape velocity calculator - Finlay
+    cylinder - Lucas
 
     
