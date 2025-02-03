@@ -27,7 +27,7 @@ Escape velocity calculator - Finlay"""
             os.system('cls')
             val = False
 """
-
+#1
 def circle(R):
     import math
     import os
@@ -68,7 +68,7 @@ def circle(R):
         print(f"The answer is {A}")
         return A
     
-
+#2
 def triangle(R):
     import math
     import os
@@ -91,26 +91,73 @@ def triangle(R):
             os.system('cls')
             val = False
     if choice == 1:
-        A = float(input("Please enter the area of the triangle: "))
-        b = float(input("Please enter the base of the triangle: "))
+        shape = False
+        while shape == False:
+            try:
+                A = float(input("Please enter the area of the triangle: "))
+                b = float(input("Please enter the base of the triangle: "))
+            except:
+                print("Please enter a valid input")
+                time.sleep(1)
+                os.system('cls')
+                continue
+            if A <= 0 or b <= 0:
+                print("That shape does not exist on the simple plain")
+                time.sleep(1)
+                os.system('cls')
+                continue
+            else:
+                shape = True
+                 
         h = 2*A/b
         h = round(h,R)
         print(f"The answer is {h}")
         return h
     elif choice == 2:
-        A = float(input("Please enter the area of the triangle: "))
-        h = float(input("Please enter the height of the triangle: "))
+        shape = False
+        while shape == False:
+            try:
+                A = float(input("Please enter the area of the triangle: "))
+                h = float(input("Please enter the height of the triangle: "))
+            except:
+                print("Please enter a valid input")
+                time.sleep(1)
+                os.system('cls')
+                continue
+            if A <= 0 or h <= 0:
+                print("That shape does not exist on the simple plain")
+                time.sleep(1)
+                os.system('cls')
+                continue
+            else:
+                shape = True
         b = 2*A/h
         b= round(b,R)
         print(f"The answer is {b}")
         return b
     elif choice == 3:
-        b = float(input("Please enter the base of the triangle: "))
-        h = float(input("Please enter the height of the triangle: "))
+        shape = False
+        while shape == False:
+            try:
+                b = float(input("Please enter the base of the triangle: "))
+                h = float(input("Please enter the height of the triangle: "))
+            except:
+                print("Please enter a valid input")
+                time.sleep(1)
+                os.system('cls')
+                continue
+            if b <= 0 or h <= 0:
+                print("That shape does not exist on the simple plain")
+                time.sleep(1)
+                os.system('cls')
+                continue
+            else:
+                shape = True
         A = b*h/2
         A = round(A,R)
         print(f"The answer is {A}")
         return A
+#3
 def triangularprism(R):
     import math
     import os
@@ -134,23 +181,24 @@ def triangularprism(R):
             val = False 
         if choice == 1:
             shape = False
-            try:
-                a = float(input("Please enter the first base of the triangular prism: "))
-                b = float(input("Please enter the second base of the triangular prism: "))
-                c = float(input("Please enter the third base of the triangular prism: "))
-                V = float(input("Please enter the volume of the triangular prism: "))
-            except:
-                print("Please enter a valid input")
-                time.sleep(1)
-                os.system('cls')
-                continue
-            if a <= 0 or b <= 0 or c <= 0 or h <= 0:
-                print("That shape does not exist on the simple plain")
-                time.sleep(1)
-                os.system('cls')
-                continue
-            else:
-                shape = True
+            while shape == False:
+                try:
+                    a = float(input("Please enter the first base of the triangular prism: "))
+                    b = float(input("Please enter the second base of the triangular prism: "))
+                    c = float(input("Please enter the third base of the triangular prism: "))
+                    V = float(input("Please enter the volume of the triangular prism: "))
+                except:
+                    print("Please enter a valid input")
+                    time.sleep(1)
+                    os.system('cls')
+                    continue
+                if a <= 0 or b <= 0 or c <= 0 or V <= 0:
+                    print("That shape does not exist on the simple plain")
+                    time.sleep(1)
+                    os.system('cls')
+                    continue
+                else:
+                    shape = True
             A = (4*V)/(((a+b+c)*(b+c-a)*(c+a-b)*(a+b-c))**0.5)
             A = round(A,R)
             print(f"The answer is {A}")
