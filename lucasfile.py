@@ -203,11 +203,11 @@ def deriv():
             os.system('cls')
             print('You didn\'t select an option.')
     if choice == 1:
-        
+        pass
     if choice == 2:
-        
+        pass
     if choice == 3:
-        
+        pass
     os.system('cls')
     ans = round(ans, 2)
     print(f"The answer is {ans}.")
