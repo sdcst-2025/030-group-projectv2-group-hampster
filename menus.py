@@ -29,30 +29,40 @@ import lucasfile as l
 
 
 print("*list of calculators*")
-print("0)instructions")
-print("1)rectangle calculator")
-print("2)volume of sphere calculator")
-print("3)circle calculator")
-print("2)triangle calculator")
-print("3)simple interest calculator")
-print("2)triangular prism calculator")
-print("3)cylinder calculator")
-print("2) calculator")
-print("3)calculator")
-print("2)calculator")
-print("3)calculator")
-print("2)calculator")
-print("3)calculator")
+print("1)instructions")
+print("2)rectangle calculator")
+print("3)volume of sphere calculator")
+print("4)circle calculator")
+print("5)triangle calculator")
+print("6)simple interest calculator")
+print("7)triangular prism calculator")
+print("8)cylinder calculator")
+print("9)calculator")
+print("10)calculator")
+print("11)calculator")
+print("12)calculator")
+print("13)calculator")
+print("14)calculator")
 
 choice=input('Enter a choice of calculator: ')
-
-R = 1
 rnum = int(input('how many decimal places do you want? '))
-R = round(R,rnum)
+
+def get_rounded_value():
+    try:
+        rnum = int(input("How many decimal places do you want? "))
+        if rnum < 0:
+            print("Decimal places cannot be negative.")
+            return None
+        R = round(1, rnum)
+        return R
+    except ValueError:
+        print("Invalid input. Please enter a non-negative integer.")
+        return None
 
 
 
-'''if choice=='1':
+
+if choice=='1':
       print("instructions: enter one of the numbers listed to relocate to that calculator, or to exit.\n The calculator will not work if you enter an invalid number\n...")
 if choice=='2':
       l.rectangle()
@@ -68,7 +78,7 @@ if choice=='7':
         f.triangularprism()
 if choice=='8':
         l.cylinder()
-if choice=='9':
+'''if choice=='9':
         
 if choice=='10':
         
