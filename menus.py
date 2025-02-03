@@ -18,12 +18,7 @@ input("")
 os.system('cls')
 
 
-
-import finlayfile
 import finlayfile as f
-
-
-import lucasfile
 import lucasfile as l
 
 
@@ -65,9 +60,9 @@ def get_rounded_value():
 if choice=='1':
       print("instructions: enter one of the numbers listed to relocate to that calculator, or to exit.\n The calculator will not work if you enter an invalid number\n...")
 if choice=='2':
-      l.rectangle()
+        l.rectangle()
 if choice=='3':
-       l.volsphere()
+        l.volsphere()
 if choice=='4':
         f.circle()
 if choice=='5':
