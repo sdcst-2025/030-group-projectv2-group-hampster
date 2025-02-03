@@ -9,7 +9,6 @@ List of calculators:
     compound interest w/ reacuring input - Finlay
     simple interest with reacurring input - Lucas
     loan with compound interest interest and reacurring payment - Last person
-    basic derivative calculator - Lucas
     Best price calculator - Finlay
     Gravitation time dilation calculator - Lucas
     Escape velocity calculator - Finlay
@@ -183,39 +182,12 @@ def simpleinterest():
     print(f"The answer is ${ans}.")
     return
 
-def deriv():
-    os.system('cls')
-    picked = 0
-    while picked == 0:
-        print('-------------------------\nPlease make a selection: \n-------------------------')
-        print('To solve for the , type "1"')
-        print('To solve for the , type "2"')
-        print('To solve for the , type "3"')
-        try:
-            choice = int(input(""))
-            if choice > 0 and choice < 4:
-                picked = 1
-                os.system('cls')
-            else:
-                os.system('cls')
-                print('You didn\'t select an option.')
-        except:
-            os.system('cls')
-            print('You didn\'t select an option.')
-    if choice == 1:
-        pass
-    if choice == 2:
-        pass
-    if choice == 3:
-        pass
-    os.system('cls')
-    ans = round(ans, 2)
-    print(f"The answer is {ans}.")
-    return
+#one more calc, not grav
+
 
 
 if __name__ == "__main__":
-    deriv()
+    simpleinterest()
 
 
 '''
@@ -241,11 +213,11 @@ TEMPLATE FOR FUNCTIONS:
             os.system('cls')
             print('You didn\'t select an option.')
     if choice == 1:
-        
+        pass
     if choice == 2:
-        
+        pass
     if choice == 3:
-        
+        pass
     os.system('cls')
     ans = round(ans, 2)
     print(f"The answer is {ans}.")
