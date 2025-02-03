@@ -28,7 +28,7 @@ Escape velocity calculator - Finlay"""
             val = False
 """
 
-def circle():
+def circle(R):
     import math
     import os
     import time
@@ -51,24 +51,24 @@ def circle():
     if choice == 1:
         a = float(input("Please enter the area of the circle: "))
         r = (a / math.pi)**0.5
-        r = round(r,2)
+        r = round(r,R)
         print(f"The answer is {r}")
         return a
     elif choice == 2:
         r = float(input("Please enter the radius of the circle: "))
         C = 2*math.pi*r
-        C = round(C,2)
+        C = round(C,R)
         print(f"The answer is {C}")
         return C
     elif choice == 3:
         r = float(input("Enter radius of the circle"))
         A = math.pi*r**2
-        A = round(A,2)
+        A = round(A,R)
         print(f"The answer is {A}")
         return A
     
 
-def triangle():
+def triangle(R):
     import math
     import os
     import time
@@ -92,21 +92,24 @@ def triangle():
         A = float(input("Please enter the area of the triangle: "))
         b = float(input("Please enter the base of the triangle: "))
         h = 2*A/b
+        h = round(h,R)
         print(f"The answer is {h}")
         return h
     elif choice == 2:
         A = float(input("Please enter the area of the triangle: "))
         h = float(input("Please enter the height of the triangle: "))
         b = 2*A/h
+        b= round(b,R)
         print(f"The answer is {b}")
         return b
     elif choice == 3:
         b = float(input("Please enter the base of the triangle: "))
         h = float(input("Please enter the height of the triangle: "))
         A = b*h/2
+        A = round(A,R)
         print(f"The answer is {A}")
         return A
-def triangularprism():
+def triangularprism(R):
     import math
     import os
     import time
@@ -127,7 +130,13 @@ def triangularprism():
             os.system('cls')
             val = False 
         if choice == 1:
-            print("paused")
+            a = float(input("Please enter the first base of the triangular prism: "))
+            b = float(input("Please enter the second base of the triangular prism: "))
+            c = float(input("Please enter the third base of the triangular prism: "))
+            V = float(input("Please enter the volume of the triangular prism: "))
+            A = (4*V)/(((a+b+c)*(b+c-a)*(c+a-b)*(a+b-c))**0.5)
+            A = round(A,R)
+            print(f"The answer is {A}")
         if choice == 2:
             a = float(input("Please enter the first base of the triangular prism: "))
             b = float(input("Please enter the second base of the triangular prism: "))
@@ -136,6 +145,14 @@ def triangularprism():
             s = (a + b + c)/2
             ab = (s*(s-a)*(s-b)*(s-c))**0.5
             A = 2*ab + (a+b+c)*h
+            A = round(A,R)
             print(f"The answer is {A}")
-if __name__ == "__main__":
-    triangularprism()
+        if choice == 3: 
+            a = float(input("Please enter the first base of the triangular prism: "))
+            b = float(input("Please enter the second base of the triangular prism: "))
+            c = float(input("Please enter the third base of the triangular prism: "))
+            h = float(input("Please enter the height of the triangular prism: "))
+            V = (h/4)
+if  __name__ == "__main__":
+    R = 2
+    triangularprism(R) 
