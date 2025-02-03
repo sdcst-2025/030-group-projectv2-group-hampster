@@ -163,38 +163,59 @@ def cylinder():
 
 def simpleinterest():
     os.system('cls')
+    picked = 0
+    picked1 = 0
     while picked == 0:
         os.system('cls')
         print("-------------------------\nSimple Interest Calculator\n-------------------------")
         try:
             p = float(input("Enter the amount of money: "))
-            r = float(input("Enter the interest rate"))
-            if p > 0 and r > 0:
+            r = float(input("Enter the interest rate in percent (%): "))
+            t = float(input("Enter the amount of years: "))
+            if p > 0 and r > 0 and t >= 0:
                 picked = 1
             else: 
                 print("You didn't enter a valid input.")
         except:
             print("You didn't enter a valid input.")
-    print('-------------------------\nSelect Compound Period\n-------------------------')
-    print('For every second, type " "')
-    print('For , type " "')
-    print('For , type " "')
-    print('For , type " "')
-    print('For , type " "')
-    print('For , type " "')
-    print('For , type " "')
-    print('For , type " "')
-    print('For , type " "')
-    print('For , type " "')
-    print('For , type " "')
+    ans = p*(r/100)*t
+    ans = round(ans, 2)
+    print(f"The answer is ${ans}.")
+    return
+
+def deriv():
+    os.system('cls')
+    picked = 0
+    while picked == 0:
+        print('-------------------------\nPlease make a selection: \n-------------------------')
+        print('To solve for the , type "1"')
+        print('To solve for the , type "2"')
+        print('To solve for the , type "3"')
+        try:
+            choice = int(input(""))
+            if choice > 0 and choice < 4:
+                picked = 1
+                os.system('cls')
+            else:
+                os.system('cls')
+                print('You didn\'t select an option.')
+        except:
+            os.system('cls')
+            print('You didn\'t select an option.')
+    if choice == 1:
+        
+    if choice == 2:
+        
+    if choice == 3:
+        
+    os.system('cls')
     ans = round(ans, 2)
     print(f"The answer is {ans}.")
     return
 
 
-
 if __name__ == "__main__":
-    cylinder()
+    deriv()
 
 
 '''
