@@ -18,51 +18,62 @@ input("")
 os.system('cls')
 
 
-
-
-
-
-import lucasfile
+import finlayfile as f
 import lucasfile as l
 
 
 
 print("*list of calculators*")
-print("0)instructions")
-print("1)rectangle calculator")
-print("2)calculator")
-print("3)calculator")
-print("2)calculator")
-print("3)calculator")
-print("2)calculator")
-print("3)calculator")
-print("2)calculator")
-print("3)calculator")
-print("2)calculator")
-print("3)calculator")
-print("2)calculator")
-print("3)calculator")
+print("1)instructions")
+print("2)rectangle calculator")
+print("3)volume of sphere calculator")
+print("4)circle calculator")
+print("5)triangle calculator")
+print("6)simple interest calculator")
+print("7)triangular prism calculator")
+print("8)cylinder calculator")
+print("9)calculator")
+print("10)calculator")
+print("11)calculator")
+print("12)calculator")
+print("13)calculator")
+print("14)calculator")
 
 choice=input('Enter a choice of calculator: ')
-    
+rnum = int(input('how many decimal places do you want? '))
+
+def get_rounded_value():
+    try:
+        rnum = int(input("How many decimal places do you want? "))
+        if rnum < 0:
+            print("Decimal places cannot be negative.")
+            return None
+        R = round(1, rnum)
+        return R
+    except ValueError:
+        print("Invalid input. Please enter a non-negative integer.")
+        return None
+
+
+
 
 if choice=='1':
       print("instructions: enter one of the numbers listed to relocate to that calculator, or to exit.\n The calculator will not work if you enter an invalid number\n...")
 if choice=='2':
-      l.rectangle()
-'''if choice=='3':
-        volume of a sphere(lucas)
+        l.rectangle()
+if choice=='3':
+        l.volsphere()
 if choice=='4':
-        area of a circle (finlay)
+        f.circle()
 if choice=='5':
-        
+        f.triangle()
 if choice=='6':
-        
+        l.simpleinterest()
 if choice=='7':
-        
+        f.triangularprism()
 if choice=='8':
-        
-if choice=='9':
+        l.cylinder()
+'''if choice=='9':
         
 if choice=='10':
         
@@ -71,18 +82,10 @@ if choice=='11':
 if choice=='12':
         
 if choice=='13':
-'''       
+
 if choice=='14':
-          exit()
+       exit()
+'''
 
 
-#create a loan with compound interest and reacurring payment
-p = int(input("Enter the principal amount: "))
-r = int(input("Enter rate of interest: "))
-t = int(input("Enter time in years: " ))
-
-def compound_intrest(p,r,t):
-        Amount = p * (pow((1 + r / 100), t))
-        CI = Amount - p
-        print("Compound interest is", CI)
 
