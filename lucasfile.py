@@ -14,7 +14,7 @@ List of calculators:
     Escape velocity calculator - Finlay
     cylinder - Lucas
     '''
-import os, math
+import os, math, random, time
 
 def rectangle(R):
     os.system('cls')
@@ -221,10 +221,72 @@ def bullet(R):
     print(f"The answer is {ans}{unit}.")
     return
 
+def coin():
+    os.system('cls')
+    print('-------------------------\nWelcome to Coin Flip: \n-------------------------')
+    input('Press Enter to flip a coin.')
+    os.system('cls')
+    print('')
+    print('------')
+    print('')
+    time.sleep(0.15)
+    os.system('cls')
+    print(' \\')
+    print('  \\')
+    print('   \\')
+    time.sleep(0.15)
+    os.system('cls')
+    print('  |')
+    print('  |')
+    print('  |')
+    time.sleep(0.15)
+    os.system('cls')
+    print('   /')
+    print('  /')
+    print(' /')
+    time.sleep(0.15)
+    os.system('cls')
+    print('')
+    print('------')
+    print('')
+    time.sleep(0.15)
+    os.system('cls')
+    print(' \\')
+    print('  \\')
+    print('   \\')
+    time.sleep(0.15)
+    os.system('cls')
+    print('  |')
+    print('  |')
+    print('  |')
+    time.sleep(0.15)
+    os.system('cls')
+    print('   /')
+    print('  /')
+    print(' /')
+    time.sleep(0.15)
+    os.system('cls')
+    print('')
+    print('------')
+    print('')
+    flip = random.randint(0,1)
+    if flip == 0:
+        print('You got heads!')
+    if flip == 1:
+        print('You got tails!')
+
+def randomnumber():
+    os.system('cls')
+    print('-------------------------\nWelcome to Random Number Generator \n-------------------------')
+    print('Enter the desired range.')
+    start = float(input('First number: '))
+    end = float(input())
+
+        
 
 
 if __name__ == "__main__":
-    pass
+    randomnumber()
 
 
 '''
