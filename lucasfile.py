@@ -16,7 +16,7 @@ List of calculators:
     '''
 import os, math
 
-def rectangle():
+def rectangle(R):
     os.system('cls')
     picked = 0
     while picked == 0:
@@ -52,7 +52,7 @@ def rectangle():
     print(f"The answer is {ans}.")
     return
 
-def volsphere():
+def volsphere(R):
     os.system('cls')
     picked = 0
     while picked == 0:
@@ -85,7 +85,7 @@ def volsphere():
     print(f"The answer is {ans}.")
     return
 
-def rectangularprism():
+def rectangularprism(R):
     os.system('cls')
     picked = 0
     while picked == 0:
@@ -124,7 +124,7 @@ def rectangularprism():
     print(f"The answer is {ans}.")
     return
 
-def cylinder():
+def cylinder(R):
     os.system('cls')
     picked = 0
     while picked == 0:
