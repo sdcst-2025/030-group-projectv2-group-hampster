@@ -50,19 +50,60 @@ def circle(R):
             os.system('cls')
             val = False
     if choice == 1:
-        a = float(input("Please enter the area of the circle: "))
+        shape = False
+        while shape == False:
+            try:
+                a = float(input("Please enter the area of the circle: "))
+            except:
+                print("Please enter a valid input")
+                time.sleep(1)
+                os.system('cls')
+                continue
+            if A <= 0:
+                print("That shape does not exist on the simple plain")
+                time.sleep(1)
+                os.system('cls')
+                continue
+            else:
+                shape = True
         r = (a / math.pi)**0.5
         r = round(r,R)
         print(f"The answer is {r}")
         return a
     elif choice == 2:
-        r = float(input("Please enter the radius of the circle: "))
+        shape = False
+        while shape == False:
+            try:
+                r = float(input("Please enter the radius of the circle: "))
+            except:
+                print("Please enter a valid input")
+                time.sleep(1)
+                os.system('cls')
+                continue
+            if r <= 0:
+                print("That shape does not exist on the simple plain")
+                time.sleep(1)
+                os.system('cls')
+                continue
         C = 2*math.pi*r
         C = round(C,R)
         print(f"The answer is {C}")
         return C
     elif choice == 3:
-        r = float(input("Enter radius of the circle"))
+        shape = False
+        while shape == False:
+            try:
+                r = float(input("Enter radius of the circle"))
+            except:
+                print("Please enter a valid input")
+                time.sleep(1)
+                os.system('cls')
+                continue
+            if r <= 0:
+                print("That shape does not exist on the simple plain")
+                time.sleep(1)
+                os.system('cls')
+                continue
         A = math.pi*r**2
         A = round(A,R)
         print(f"The answer is {A}")
@@ -107,8 +148,7 @@ def triangle(R):
                 os.system('cls')
                 continue
             else:
-                shape = True
-                 
+                shape = True  
         h = 2*A/b
         h = round(h,R)
         print(f"The answer is {h}")
@@ -253,6 +293,7 @@ def triangularprism(R):
             V = round(V,R)
             print(f"The answer is {V}")
             return V
+
 if  __name__ == "__main__":
     R = 2
     triangularprism(R) 
