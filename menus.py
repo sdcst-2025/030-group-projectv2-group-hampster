@@ -2,6 +2,13 @@
 #first get the input number for that calculator you want and add a way to prevent wrong numbers, then add all the calculators to the menu and make it so you can select them. Lastly make the menu look good by adding things to it.
 import os
 
+
+
+
+
+
+
+
 print("start calculating")
 
 
@@ -22,7 +29,6 @@ import finlayfile as f
 import lucasfile as l
 
 
-
 print("*list of calculators*")
 print("1)instructions")
 print("2)rectangle calculator")
@@ -40,15 +46,15 @@ print("13)calculator")
 print("14)calculator")
 
 choice=input('Enter a choice of calculator: ')
-rnum = int(input('how many decimal places do you want? '))
+R = int(input('How many decimal points do you want to round to? '))
 
-def get_rounded_value():
+def rounded_value():
     try:
         rnum = int(input("How many decimal places do you want? "))
         if rnum < 0:
             print("Decimal places cannot be negative.")
             return None
-        R = round(1, rnum)
+        R = round(R, rnum)
         return R
     except ValueError:
         print("Invalid input. Please enter a non-negative integer.")
@@ -60,19 +66,19 @@ def get_rounded_value():
 if choice=='1':
       print("instructions: enter one of the numbers listed to relocate to that calculator, or to exit.\n The calculator will not work if you enter an invalid number\n...")
 if choice=='2':
-        l.rectangle()
+        l.rectangle(R)
 if choice=='3':
-        l.volsphere()
+        l.volsphere(R)
 if choice=='4':
-        f.circle()
+        f.circle(R)
 if choice=='5':
-        f.triangle()
+        f.triangle(R)
 if choice=='6':
-        l.simpleinterest()
+        l.simpleinterest(R)
 if choice=='7':
-        f.triangularprism()
+        f.triangularprism(R)
 if choice=='8':
-        l.cylinder()
+        l.cylinder(R)
 '''if choice=='9':
         
 if choice=='10':

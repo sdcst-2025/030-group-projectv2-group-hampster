@@ -14,9 +14,9 @@ List of calculators:
     Escape velocity calculator - Finlay
     cylinder - Lucas
     '''
-import os, math
+import os, math, random, time
 
-def rectangle():
+def rectangle(R):
     os.system('cls')
     picked = 0
     while picked == 0:
@@ -52,7 +52,7 @@ def rectangle():
     print(f"The answer is {ans}.")
     return
 
-def volsphere():
+def volsphere(R):
     os.system('cls')
     picked = 0
     while picked == 0:
@@ -85,7 +85,7 @@ def volsphere():
     print(f"The answer is {ans}.")
     return
 
-def rectangularprism():
+def rectangularprism(R):
     os.system('cls')
     picked = 0
     while picked == 0:
@@ -124,7 +124,7 @@ def rectangularprism():
     print(f"The answer is {ans}.")
     return
 
-def cylinder():
+def cylinder(R):
     os.system('cls')
     picked = 0
     while picked == 0:
@@ -163,7 +163,6 @@ def cylinder():
 def simpleinterest():
     os.system('cls')
     picked = 0
-    picked1 = 0
     while picked == 0:
         os.system('cls')
         print("-------------------------\nSimple Interest Calculator\n-------------------------")
@@ -182,12 +181,112 @@ def simpleinterest():
     print(f"The answer is ${ans}.")
     return
 
-#one more calc, not grav
+def bullet(R):
+    os.system('cls')
+    picked = 0
+    while picked == 0:
+        print('-------------------------\nPlease make a selection: \n-------------------------')
+        print('To solve for the mass, type "1"')
+        print('To solve for the velocity, type "2"')
+        print('To solve for the kinetic energy, type "3"')
+        try:
+            choice = int(input(""))
+            if choice > 0 and choice < 4:
+                picked = 1
+                os.system('cls')
+            else:
+                os.system('cls')
+                print('You didn\'t select an option.')
+        except:
+            os.system('cls')
+            print('You didn\'t select an option.')
+    #e=1/2mv^2
+    if choice == 1:
+        v = float(input('Enter the velocity: '))
+        e = float(input('Enter the kinetic energy: '))
+        ans = ((2*e)/(v**2))
+        unit = "kg"
+    if choice == 2:
+        m = float(input('Enter the mass: '))
+        e = float(input('Enter the kinetic energy: '))
+        ans = math.sqrt((2*e)/m)
+        unit = "m/s"
+    if choice == 3:
+        m = float(input('Enter the mass: '))
+        v = float(input('Enter the velocity: '))
+        ans = ((1/2)*m*(v**2))
+        unit = "J"
+    os.system('cls')
+    ans = round(ans, R)
+    print(f"The answer is {ans}{unit}.")
+    return
 
+def coin():
+    os.system('cls')
+    print('-------------------------\nWelcome to Coin Flip: \n-------------------------')
+    input('Press Enter to flip a coin.')
+    os.system('cls')
+    print('')
+    print('------')
+    print('')
+    time.sleep(0.15)
+    os.system('cls')
+    print(' \\')
+    print('  \\')
+    print('   \\')
+    time.sleep(0.15)
+    os.system('cls')
+    print('  |')
+    print('  |')
+    print('  |')
+    time.sleep(0.15)
+    os.system('cls')
+    print('   /')
+    print('  /')
+    print(' /')
+    time.sleep(0.15)
+    os.system('cls')
+    print('')
+    print('------')
+    print('')
+    time.sleep(0.15)
+    os.system('cls')
+    print(' \\')
+    print('  \\')
+    print('   \\')
+    time.sleep(0.15)
+    os.system('cls')
+    print('  |')
+    print('  |')
+    print('  |')
+    time.sleep(0.15)
+    os.system('cls')
+    print('   /')
+    print('  /')
+    print(' /')
+    time.sleep(0.15)
+    os.system('cls')
+    print('')
+    print('------')
+    print('')
+    flip = random.randint(0,1)
+    if flip == 0:
+        print('You got heads!')
+    if flip == 1:
+        print('You got tails!')
+
+def randomnumber():
+    os.system('cls')
+    print('-------------------------\nWelcome to Random Number Generator \n-------------------------')
+    print('Enter the desired range.')
+    start = float(input('First number: '))
+    end = float(input())
+
+        
 
 
 if __name__ == "__main__":
-    simpleinterest()
+    randomnumber()
 
 
 '''
