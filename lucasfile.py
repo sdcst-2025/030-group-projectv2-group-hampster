@@ -163,7 +163,6 @@ def cylinder(R):
 def simpleinterest():
     os.system('cls')
     picked = 0
-    picked1 = 0
     while picked == 0:
         os.system('cls')
         print("-------------------------\nSimple Interest Calculator\n-------------------------")
@@ -182,12 +181,50 @@ def simpleinterest():
     print(f"The answer is ${ans}.")
     return
 
-#one more calc, not grav
+def bullet(R):
+    os.system('cls')
+    picked = 0
+    while picked == 0:
+        print('-------------------------\nPlease make a selection: \n-------------------------')
+        print('To solve for the mass, type "1"')
+        print('To solve for the velocity, type "2"')
+        print('To solve for the kinetic energy, type "3"')
+        try:
+            choice = int(input(""))
+            if choice > 0 and choice < 4:
+                picked = 1
+                os.system('cls')
+            else:
+                os.system('cls')
+                print('You didn\'t select an option.')
+        except:
+            os.system('cls')
+            print('You didn\'t select an option.')
+    #e=1/2mv^2
+    if choice == 1:
+        v = float(input('Enter the velocity: '))
+        e = float(input('Enter the kinetic energy: '))
+        ans = ((2*e)/(v**2))
+        unit = "kg"
+    if choice == 2:
+        m = float(input('Enter the mass: '))
+        e = float(input('Enter the kinetic energy: '))
+        ans = math.sqrt((2*e)/m)
+        unit = "m/s"
+    if choice == 3:
+        m = float(input('Enter the mass: '))
+        v = float(input('Enter the velocity: '))
+        ans = ((1/2)*m*(v**2))
+        unit = "J"
+    os.system('cls')
+    ans = round(ans, R)
+    print(f"The answer is {ans}{unit}.")
+    return
 
 
 
 if __name__ == "__main__":
-    simpleinterest()
+    pass
 
 
 '''
