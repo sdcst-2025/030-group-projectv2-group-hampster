@@ -54,6 +54,8 @@ print("14)Flip a coin")
 print("15)Exit")
 
 choice=input('Enter a choice of calculator: ')
+if choice == "15":
+       exit()
 R = int(input('How many decimal points do you want to round to? '))
 
 def rounded_value():
