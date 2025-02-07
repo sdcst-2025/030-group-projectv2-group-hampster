@@ -35,18 +35,45 @@ def rectangle(R):
         except:
             os.system('cls')
             print('You didn\'t select an option.')
-    if choice == 1:
-        s1 = float(input("Enter the given side length: "))
-        area = float(input("Enter the area: "))
-        ans = area/s1
+    if choice == 1: 
+        val = 0
+        while val == 0:
+            try:
+                ans = 0
+                s1 = float(input("Enter the given side length: "))
+                area = float(input("Enter the area: "))
+                ans = area/s1
+                if ans != 0:
+                    val = 1
+            except:
+                os.system('cls')
+                print('You didn\'t enter acceptable values.')
     if choice == 2:
-        s1 = float(input("Enter the first side length: "))
-        s2 = float(input("Enter the second side length: "))
-        ans = (s1*2)+(s2*2)
+        val = 0
+        while val == 0:
+            try:
+                ans = 0
+                s1 = float(input("Enter the first side length: "))
+                s2 = float(input("Enter the second side length: "))
+                ans = (s1*2)+(s2*2)
+                if ans != 0:
+                    val = 1
+            except:
+                os.system('cls')
+                print('You didn\'t enter acceptable values.')
     if choice == 3:
-        s1 = float(input("Enter the first side length: "))
-        s2 = float(input("Enter the second side length: "))
-        ans = s1*s2
+        val = 0
+        while val == 0:
+            try:
+                ans = 0
+                s1 = float(input("Enter the first side length: "))
+                s2 = float(input("Enter the second side length: "))
+                ans = s1*s2
+                if ans != 0:
+                    val = 1
+            except:
+                os.system('cls')
+                print('You didn\'t enter acceptable values')
     os.system('cls')
     ans = round(ans, R)
     print(f"The answer is {ans}.")
@@ -72,14 +99,41 @@ def volsphere(R):
             os.system('cls')
             print('You didn\'t select an option.')
     if choice == 1:
-        vol = float(input("Enter the volume: "))
-        ans = (3*(vol/(4*math.pi)))**(1/3)
+        val = 0
+        while val == 0:
+            try:
+                ans = 0
+                vol = float(input("Enter the volume: "))
+                ans = (3*(vol/(4*math.pi)))**(1/3)
+                if ans != 0:
+                    val = 1
+            except:
+                os.system('cls')
+                print('You didn\'t enter an acceptable value.')
     if choice == 2:
-        rad = float(input("Enter the radius: "))
-        ans = (4*math.pi*(rad**2))
+        val = 0
+        while val == 0:
+            try:
+                ans = 0
+                rad = float(input("Enter the radius: "))
+                ans = (4*math.pi*(rad**2))
+                if ans != 0:
+                    val = 1
+            except:
+                os.system('cls')
+                print('You didn\'t enter an acceptable value.')
     if choice == 3:
-        rad = float(input("Enter the radius: "))
-        ans = ((4/3)*math.pi*(rad**3))
+        val = 0
+        while val == 0:
+            try:
+                ans = 0
+                rad = float(input("Enter the radius: "))
+                ans = ((4/3)*math.pi*(rad**3))
+                if ans != 0:
+                    val = 1
+            except:
+                os.system('cls')
+                print('You didn\'t enter an acceptable value.')
     os.system('cls')
     ans = round(ans, R)
     print(f"The answer is {ans}.")
@@ -105,20 +159,47 @@ def rectangularprism(R):
             os.system('cls')
             print('You didn\'t select an option.')
     if choice == 1:
-        s1 = float(input("Enter the first side length: "))
-        s2 = float(input("Enter the second side length: "))
-        vol = float(input("Enter the volume: "))
-        ans = vol/s1/s2
+        val = 0
+        while val == 0:
+            try:
+                ans = 0
+                s1 = float(input("Enter the first side length: "))
+                s2 = float(input("Enter the second side length: "))
+                vol = float(input("Enter the volume: "))
+                ans = vol/s1/s2
+                if ans != 0:
+                    val = 1
+            except:
+                os.system('cls')
+                print('You didn\'t select an option.')
     if choice == 2:
-        l = float(input("Enter the length: "))
-        w = float(input("Enter the width: "))
-        h = float(input("Enter the height: "))
-        ans = 2*((w*l)+(h*l)+(h*w))
+        val = 0
+        while val == 0:
+            try:
+                ans = 0
+                l = float(input("Enter the length: "))
+                w = float(input("Enter the width: "))
+                h = float(input("Enter the height: "))
+                ans = 2*((w*l)+(h*l)+(h*w))
+                if ans != 0:
+                    val = 1
+            except:
+                os.system('cls')
+                print('You didn\'t select an option.')
     if choice == 3:
-        l = float(input("Enter the length: "))
-        w = float(input("Enter the width: "))
-        h = float(input("Enter the height: "))
-        ans = l*w*h
+        val = 0
+        while val == 0:
+            try:
+                ans = 0
+                l = float(input("Enter the length: "))
+                w = float(input("Enter the width: "))
+                h = float(input("Enter the height: "))
+                ans = l*w*h
+                if ans != 0:
+                    val = 1
+            except:
+                os.system('cls')
+                print('You didn\'t select an option.')
     os.system('cls')
     ans = round(ans, R)
     print(f"The answer is {ans}.")
@@ -144,17 +225,44 @@ def cylinder(R):
             os.system('cls')
             print('You didn\'t select an option.')
     if choice == 1:
-        h = float(input('Enter the height: '))
-        v = float(input('Enter the volume: '))
-        ans = (v/(math.pi*h))**(1/2)
+        val = 0
+        while val == 0:
+            try:
+                ans = 0
+                h = float(input('Enter the height: '))
+                v = float(input('Enter the volume: '))
+                ans = (v/(math.pi*h))**(1/2)
+                if ans != 0:
+                    val = 1
+            except:
+                os.system('cls')
+                print('You didn\'t select an option.')
     if choice == 2:
-        r = float(input('Enter the radius: '))
-        h = float(input('Enter the height: '))
-        ans = (2*math.pi*r*h+2*math.pi*(r**2))
+        val = 0
+        while val == 0:
+            try:
+                ans = 0
+                r = float(input('Enter the radius: '))
+                h = float(input('Enter the height: '))
+                ans = (2*math.pi*r*h+2*math.pi*(r**2))
+                if ans != 0:
+                    val = 1
+            except:
+                os.system('cls')
+                print('You didn\'t select an option.')
     if choice == 3:
-        r = float(input('Enter the radius: '))
-        h = float(input('Enter the height: '))
-        ans = math.pi*(r**2)*h
+        val = 0
+        while val == 0:
+            try:
+                ans = 0
+                r = float(input('Enter the radius: '))
+                h = float(input('Enter the height: '))
+                ans = math.pi*(r**2)*h
+                if ans != 0:
+                    val = 1
+            except:
+                os.system('cls')
+                print('You didn\'t select an option.')
     os.system('cls')
     ans = round(ans, R)
     print(f"The answer is {ans}.")
@@ -202,20 +310,47 @@ def bullet(R):
             print('You didn\'t select an option.')
     #e=1/2mv^2
     if choice == 1:
-        v = float(input('Enter the velocity: '))
-        e = float(input('Enter the kinetic energy: '))
-        ans = ((2*e)/(v**2))
-        unit = "kg"
+        val = 0
+        while val == 0:
+            try:
+                ans = 0
+                v = float(input('Enter the velocity: '))
+                e = float(input('Enter the kinetic energy: '))
+                ans = ((2*e)/(v**2))
+                unit = "kg"
+                if ans != 0:
+                    val = 1
+            except:
+                os.system('cls')
+                print('You didn\'t select an option.')
     if choice == 2:
-        m = float(input('Enter the mass: '))
-        e = float(input('Enter the kinetic energy: '))
-        ans = math.sqrt((2*e)/m)
-        unit = "m/s"
+        val = 0
+        while val == 0:
+            try:
+                ans = 0
+                m = float(input('Enter the mass: '))
+                e = float(input('Enter the kinetic energy: '))
+                ans = math.sqrt((2*e)/m)
+                unit = "m/s"
+                if ans != 0:
+                    val = 1
+            except:
+                os.system('cls')
+                print('You didn\'t select an option.')
     if choice == 3:
-        m = float(input('Enter the mass: '))
-        v = float(input('Enter the velocity: '))
-        ans = ((1/2)*m*(v**2))
-        unit = "J"
+        val = 0
+        while val == 0:
+            try:
+                ans = 0
+                m = float(input('Enter the mass: '))
+                v = float(input('Enter the velocity: '))
+                ans = ((1/2)*m*(v**2))
+                unit = "J"
+                if ans != 0:
+                    val = 1
+            except:
+                os.system('cls')
+                print('You didn\'t select an option.')
     os.system('cls')
     ans = round(ans, R)
     print(f"The answer is {ans}{unit}.")
