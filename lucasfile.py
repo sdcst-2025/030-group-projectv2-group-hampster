@@ -279,14 +279,25 @@ def randomnumber():
     os.system('cls')
     print('-------------------------\nWelcome to Random Number Generator \n-------------------------')
     print('Enter the desired range.')
-    start = float(input('First number: '))
-    end = float(input())
+    picked = 0
+    while picked == 0:
+        try:
+            start = int(input('First number: '))
+            end = int(input('End number: '))
+            num = random.randrange(start, end)
+            if start < end:
+                picked = 1
+        except:
+            os.system('cls')
+            print('You didn\'t select an option correctly.')
+    print(f'You got {num}.')
+        
 
         
 
 
 if __name__ == "__main__":
-    randomnumber()
+    pass
 
 
 '''
