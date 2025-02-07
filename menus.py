@@ -50,13 +50,19 @@ print("10)Escape velocity calculator")
 print("11)Bullet energy calculator")
 print("12)Compound interest calculator")
 print("13)Best price calculator")
-print("14)Flip a coin")
-print("15)Exit")
+print("14)flip a coin")
+print("15)random number generator")
+print("16)Exit")
 
 choice=input('Enter a choice of calculator: ')
+<<<<<<< Updated upstream
 if choice == "15":
        exit()
 R = int(input('How many decimal points do you want to round to? '))
+=======
+if choice in ['']:
+        R = int(input('How many decimal points do you want to round to? '))
+>>>>>>> Stashed changes
 
 def rounded_value():
     try:
@@ -102,7 +108,6 @@ if choice=='13':
 if choice=='14':
         l.coin
 if choice=='15':
+        l.randomnumber
+if choice=='16':
        exit()
-
-
-
