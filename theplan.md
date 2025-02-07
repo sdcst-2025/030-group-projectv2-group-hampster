@@ -10,12 +10,15 @@ List of calculators:
     volume triangular prism - Finlay
     volume rectangular prism - Lucas
     compound interest w/ reacuring input - Finlay
-    simple interest with reacurring input - Lucas
+    simple interest - Lucas
     loan with compound interest interest and reacurring payment - Last person or Wim
-    basic derivative calculator - Lucas
     Best price calculator - Finlay
-    Gravitation time dilation calculator - Lucas
     Escape velocity calculator - Finlay
     cylinder - Lucas
+    bullet energy - Lucas
+
+    for fun:
+    coin toss - Lucas
+    random number generator with range inputs - Lucas
 
     
