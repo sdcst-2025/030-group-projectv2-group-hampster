@@ -55,14 +55,11 @@ print("15)random number generator")
 print("16)Exit")
 
 choice=input('Enter a choice of calculator: ')
-<<<<<<< Updated upstream
 if choice == "15":
        exit()
 R = int(input('How many decimal points do you want to round to? '))
-=======
 if choice in ['']:
         R = int(input('How many decimal points do you want to round to? '))
->>>>>>> Stashed changes
 
 def rounded_value():
     try:
