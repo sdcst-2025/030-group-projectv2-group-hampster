@@ -426,10 +426,6 @@ def randomnumber():
             os.system('cls')
             print('You didn\'t select an option correctly.')
     print(f'You got {num}.')
-        
-
-        
-
 
 if __name__ == "__main__":
     pass
@@ -437,8 +433,6 @@ if __name__ == "__main__":
 
 '''
 TEMPLATE FOR FUNCTIONS:
-
-
     os.system('cls')
     picked = 0
     while picked == 0:
