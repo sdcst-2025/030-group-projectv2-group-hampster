@@ -55,7 +55,7 @@ print("15)random number generator")
 print("16)Exit")
 
 choice=input('Enter a choice of calculator: ')
-if choice == "15":
+if choice == "16":
        exit()
 R = int(input('How many decimal points do you want to round to? '))
 if choice in ['']:
