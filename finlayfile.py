@@ -343,7 +343,8 @@ def compoundinterest():
         while shape == False:
             try:
                 P = float(input("Please enter the deposited amount: "))
-                r = float(input("Please enter the interest rate: "))
+                r = float(input("Please enter the interest rate as a percent: ",))
+                " %"
                 n = float(input("Please enter the number of compounds per year: "))
                 t = float(input("Please enter the time in years: "))
                 cr = float(input("Please enter the number of reaccuring contributions per year"))
@@ -360,8 +361,9 @@ def compoundinterest():
                 continue
             else:
                 shape = True
-            c = int(cr*t)
-            for i in range(c+1):
+            
+            for i in range(t+1):
+                A = Prt
                 
 
 if  __name__ == "__main__":
