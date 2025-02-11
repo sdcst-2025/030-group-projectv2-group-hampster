@@ -56,10 +56,14 @@ print("16)Exit")
 
 choice=input('Enter a choice of calculator: ')
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 if choice == "16":
        exit()
 R = int(input('How many decimal points do you want to round to? '))
 if choice in ['']:
+=======
+if choice in ['2','3','4','5','7','8','9','10','11']:
+>>>>>>> Stashed changes
 =======
 if choice in ['2','3','4','5','7','8','9','10','11']:
 >>>>>>> Stashed changes
