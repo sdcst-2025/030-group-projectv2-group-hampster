@@ -2,7 +2,7 @@
 #first get the input number for that calculator you want and add a way to prevent wrong numbers, then add all the calculators to the menu and make it so you can select them. Lastly make the menu look good by adding things to it.
 import os,math
 
-def colored_text(text, text_color=37, bg_color=40):
+def colored_text(text, text_color=30, bg_color=37):
     
     print(f"\033[{text_color}m\033[{bg_color}m{text}\033[0m")
 
@@ -18,14 +18,14 @@ bg_colors = {
 
 
 def title():
-        colored_text("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@       @       @@       @      @@      @@@@@@@@@       @@      @@@   @@@      @@       @@@@@@@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@  @@@@ @  @@@  @@      @@     @@%     @@@@@@@@@@:     @@@      @@:   %@@      @@       @@@@@@@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@@ @@@@ @@ @@@   @  @@@@@  @@@@@@  @@@@@@@@@@@@@@  @@@@@@@@@  @@@  @@@  @ @@@@  @@@@ .@@@@@@@@@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@@      @@    @@@@       @@@@@  @@@@@@  *@@@@@@@@@@@@@  %@@@  @@@       @     @@@@@@  @@@@@@@@@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@   @@@@@  @@    @  @@@@@@     @@@     @@@@@@@@@@=     @@@@@  @@@  @@@  @  @@   @@@@  @@@@@@@@@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@   @@@@@   @    @       @     @@@      @@@@@@@@@      @@@@@  @@@  @@@  @   @@   @@@  @@@@@@@@@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", text_colors["white"], bg_colors["red"])
+        colored_text("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", text_colors["white"], bg_colors["red"])
+        colored_text("@@@@@@       @       @@       @      @@      @@@@@@@@@       @@    @@   @@@      @@        @@        @@", text_colors["white"], bg_colors["red"])
+        colored_text("@@@@@@  @@@@ @  @@@  @@      @@     @@%     @@@@@@@@@@:     @@@    @@   @@@      @2        @@   @@   @@", text_colors["white"], bg_colors["red"])
+        colored_text("@@@@@@@ @@@@ @@ @@@   @  @@@@@  @@@@@@  @@@@@@@@@@@@@@  @@@@@@@  @  @   @@@@@  @@@@    @@@@@@   @@   @@", text_colors["white"], bg_colors["red"])
+        colored_text("@@@@@@@      @@    @@@@       @@@@@  @@@@@@  *@@@@@@@@      %@@  @@  @  @@@@@  @@@@        @@       @@@", text_colors["white"], bg_colors["red"])
+        colored_text("@@@@@@   @@@@@  @@    @  @@@@@@     @@@     @@@@@@@@@@= @@@@@@@  @@@    @@@@@  @@@@    @@@@@@   @@   @@", text_colors["white"], bg_colors["red"])
+        colored_text("@@@@@@   @@@@@   @    @       @     @@@      @@@@@@@@@      @@@  @@@@   @@@@@  @@@@        @@   @@   @@", text_colors["white"], bg_colors["red"])
+        colored_text("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", text_colors["white"], bg_colors["red"])
 
 title()
 
@@ -55,11 +55,19 @@ print("15)random number generator")
 print("16)Exit")
 
 choice=input('Enter a choice of calculator: ')
+<<<<<<< Updated upstream
 if choice == "16":
        exit()
 R = int(input('How many decimal points do you want to round to? '))
 if choice in ['']:
+=======
+if choice in ['2','3','4','5','7','8','9','10','11']:
+>>>>>>> Stashed changes
         R = int(input('How many decimal points do you want to round to? '))
+else:
+       pass
+       
+       
 
 def rounded_value():
     try:
