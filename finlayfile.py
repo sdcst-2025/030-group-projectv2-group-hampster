@@ -376,7 +376,72 @@ def compoundinterest():
                     for x in range(int(cr/n)):
                         P += ca
         print(f"{A}$")
-
+#5 
+def escapevelocity():
+    import math
+    import os
+    import time
+    val = False
+    while val == False:
+        print("-------------------------\nPlease make a selection\n-------------------------")
+        try:
+            choice = int(input('To solve for a specific planet type "1"\nTo solve for a custom planet type "2"\n'))
+            time.sleep(1)
+            os.system('cls')
+            if choice in range(1,3):
+                val = True
+            else: 
+                print("You entered an invalid input")
+        except:
+            print("You entered an invalid input")
+            time.sleep(1)
+            os.system('cls')
+            val = False
+    G = 6.674*10**(-11)
+    if choice == 1:
+        shape = False
+        while shape == False:
+            try:
+                print("-------------------------\nPlease make a selection\n-------------------------")
+                choice = int(input('Type "1" for Mercury\nType "2" for Venus\nType "3" for Earth\nType "4" for Mars\n Type "5" for Jupiter\nType "6" for Saturn\nType "7" for Uranus\nType "8" for Neptune\n'))
+                time.sleep(1)
+                os.system('cls')
+                if choice in range(1,9):
+                    shape = True
+                else: 
+                    print("You entered an invalid input")
+            except:
+                print("You entered an invalid input")
+                time.sleep(1)
+                os.system('cls')
+                val = False
+        E = 5.9122*10**24
+        Re = 6378
+        if choice == 1:
+                Ve = (2*G*0.0533*E/(0.383*Re))**0.5
+                print(f"The escape velocity for Mercury is {Ve}Km/s")
+                print(G)
+        if choice == 2:
+                Ve = (2*G*0.815*E/(0.949*Re))**0.5
+                print(f"The escape velocity for Venus is {Ve}Km/s")    
+        if choice == 3:
+                Ve = (2*G*E/Re)**0.5
+                print(f"The escape velocity for Earth is {Ve}Km/s")
+        if choice == 4:
+                Ve = (2*G*0.107*E/(Re*0.532))**0.5
+                print(f"The escape velocity for Mars is {Ve}Km/s")
+        if choice == 5:
+                Ve = (2*G*317.8*E/(Re*11.21))**0.5
+                print(f"The escape velocity for Jupiter is {Ve}Km/s")
+        if choice == 6:
+                Ve = (2*G*95.2*E/(Re*9.45))**0.5
+                print(f"The escape velocity for Saturn is {Ve}Km/s")
+        if choice == 7:
+                Ve = (2*G*14.5*E/(Re*4.01))**0.5
+                print(f"The escape velocity for Uranus is {Ve}Km/s")
+        if choice == 8:
+                Ve = (2*G*17.1*E/(Re*3.88))**0.5
+                print(f"The escape velocity for Neptune is {Ve}Km/s")
 if  __name__ == "__main__":
     R = 2
-    compoundinterest() 
+    escapevelocity() 
