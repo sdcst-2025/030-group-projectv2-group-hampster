@@ -360,25 +360,22 @@ def compoundinterest():
                 continue
             else:
                 shape = True
-        for i in range(int(t+1)):
+        for i in range(int(t)):
             if n >= cr:
-                for y in range(int(cr+1)):
+                for y in range(int(cr)):
                     P += ca
                     print(f"p = {P}")
-                    for x in range(math.floor((n/cr)+1)):
+                    for x in range(math.floor((n/cr))):
                         A = P*(1+r*(1/n))
                         P = A
                         print(f" a = {A}")
             elif cr > n:
-                for y in range(math.floor(n+1)):
+                for y in range(math.floor(n)):
                     A = P*r*(1/n)
                     P = A
                     for x in range(int(cr/n)):
                         P += ca
         print(f"{A}$")
-
-
-                
 
 if  __name__ == "__main__":
     R = 2
