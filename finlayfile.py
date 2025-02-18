@@ -462,6 +462,35 @@ def escapevelocity(R):
                 shape = True
         ve = ((2*G*M/R)**0.5)/1000
         print(f"The escape velocity of your celestial body is {round(Ve,R)}")
+#6 
+def bestprice():
+    import math
+    import os
+    import time
+    os.system('cls')
+    shape = False
+    while shape == False:
+        try:
+            P = float(input("Please enter the original price: "))
+            S = float(input("Please enter the original sales: "))
+            Pc = float(input("Please enter the price after the change: "))
+            Sc = float(input("Please enter the sales after the change: "))
+        except:
+            print("Please enter a valid input")
+            time.sleep(1)
+            os.system('cls')
+            continue
+        if P <= 0 or S < 0 or Pc <= 0 or Sc < 0:
+            print("All values must be greater than 0")
+            time.sleep(1)
+            os.system('cls')
+            continue
+        else:
+            shape = True
+    cinP = Pc-P
+    cinS = S-Sc
+    R = (P+x*cinP)*(S+x*cinS)
+    
 if  __name__ == "__main__":
     R = 2
     escapevelocity() 
