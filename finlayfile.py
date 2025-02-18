@@ -377,7 +377,7 @@ def compoundinterest():
                         P += ca
         print(f"{A}$")
 #5 
-def escapevelocity():
+def escapevelocity(R):
     import math
     import os
     import time
@@ -415,33 +415,53 @@ def escapevelocity():
                 time.sleep(1)
                 os.system('cls')
                 val = False
-        E = 5.9122*10**24
-        Re = 6378
+        E = 5.97219*10**24
+        Re = 6378000
         if choice == 1:
-                Ve = (2*G*0.0533*E/(0.383*Re))**0.5
-                print(f"The escape velocity for Mercury is {Ve}Km/s")
-                print(G)
+                Ve = (((2*G*(0.0533*E))/(0.383*Re))**0.5)/1000
+                print(f"The escape velocity for Mercury is {round(Ve,R)}Km/s")
         if choice == 2:
-                Ve = (2*G*0.815*E/(0.949*Re))**0.5
-                print(f"The escape velocity for Venus is {Ve}Km/s")    
+                Ve = ((2*G*0.815*E/(0.949*Re))**0.5)/1000
+                print(f"The escape velocity for Venus is {round(Ve,R)}Km/s")    
         if choice == 3:
-                Ve = (2*G*E/Re)**0.5
-                print(f"The escape velocity for Earth is {Ve}Km/s")
+                Ve = ((2*G*E/Re)**0.5)/1000
+                print(G,E,Re)
+                print(f"The escape velocity for Earth is {round(Ve,R)}Km/s")
         if choice == 4:
-                Ve = (2*G*0.107*E/(Re*0.532))**0.5
-                print(f"The escape velocity for Mars is {Ve}Km/s")
+                Ve = ((2*G*0.107*E/(Re*0.532))**0.5)/1000
+                print(f"The escape velocity for Mars is {round(Ve,R)}Km/s")
         if choice == 5:
-                Ve = (2*G*317.8*E/(Re*11.21))**0.5
-                print(f"The escape velocity for Jupiter is {Ve}Km/s")
+                Ve = ((2*G*317.8*E/(Re*11.21))**0.5)/1000
+                print(f"The escape velocity for Jupiter is {round(Ve,R)}Km/s")
         if choice == 6:
-                Ve = (2*G*95.2*E/(Re*9.45))**0.5
-                print(f"The escape velocity for Saturn is {Ve}Km/s")
+                Ve = ((2*G*95.2*E/(Re*9.45))**0.5)/1000
+                print(f"The escape velocity for Saturn is {round(Ve,R)}Km/s")
         if choice == 7:
-                Ve = (2*G*14.5*E/(Re*4.01))**0.5
-                print(f"The escape velocity for Uranus is {Ve}Km/s")
+                Ve = ((2*G*14.5*E/(Re*4.01))**0.5)/1000
+                print(f"The escape velocity for Uranus is {round(Ve,R)}Km/s")
         if choice == 8:
-                Ve = (2*G*17.1*E/(Re*3.88))**0.5
-                print(f"The escape velocity for Neptune is {Ve}Km/s")
+                Ve = ((2*G*17.1*E/(Re*3.88))**0.5)/1000
+                print(f"The escape velocity for Neptune is {round(Ve,R)}Km/s")
+    if choice == 2:
+        shape = False
+        while shape == False:
+            try:
+                M = float(input("Please enter the mass of your celestial body in kg: "))
+                R = float(input("Please enter the radius of your celestial body in m: "))
+            except:
+                print("Please enter a valid input")
+                time.sleep(1)
+                os.system('cls')
+                continue
+            if M <= 0 or R <= 0:
+                print("All values must be greater than 0")
+                time.sleep(1)
+                os.system('cls')
+                continue
+            else:
+                shape = True
+        ve = ((2*G*M/R)**0.5)/1000
+        print(f"The escape velocity of your celestial body is {round(Ve,R)}")
 if  __name__ == "__main__":
     R = 2
     escapevelocity() 
