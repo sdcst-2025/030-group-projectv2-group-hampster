@@ -509,4 +509,4 @@ def bestprice():
         print(f"You should keep you price the same")
 if  __name__ == "__main__":
     R = 2
-    bestprice() 
+    compoundinterest() 
