@@ -468,6 +468,10 @@ def bestprice():
     import os
     import time
     os.system('cls')
+    print("-------------------------\nBest price calculator\n-------------------------\n\n\n")
+    print("This calculator uses data collected from the sales resulting from a change in price to predict the best price to maximise revenue from a \nproduct.")
+    time.sleep(5)
+    os.system('cls')
     shape = False
     while shape == False:
         try:
@@ -488,9 +492,21 @@ def bestprice():
         else:
             shape = True
     cinP = Pc-P
-    cinS = S-Sc
-    R = (P+x*cinP)*(S+x*cinS)
-    
+    cinS = Sc-S
+    b1 = P*cinS
+    b2 = S*cinP
+    b = b1+b2
+    a = cinS*cinP
+    x = (-b) / (2*a)
+    p2 = round(x*(cinP),2)
+    R = round((P+cinP*x)*(S+cinS*x),2)
+    pf = round(P+p2,2)
+    if x > 0:
+        print(f"You should increase your price by ${p2} to a total price of ${pf} for a predicted total revenue of ${R}")
+    elif x < 0: 
+        print(f"You should decrease you price by ${abs(p2)} to a total price of ${pf} for a predicted total revenue of ${R}")
+    elif x == 0:
+        print(f"You should keep you price the same")
 if  __name__ == "__main__":
     R = 2
-    escapevelocity() 
+    bestprice() 
