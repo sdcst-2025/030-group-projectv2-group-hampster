@@ -19,11 +19,11 @@ bg_colors = {
 
 def title():
         colored_text("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@       @       @@       @      @@      @@@@@@@@@       @@    @@   @@@      @@        @@        @@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@  @@@@ @  @@@  @@      @@     @@%     @@@@@@@@@@:     @@@    @@   @@@      @2        @@   @@   @@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@@ @@@@ @@ @@@   @  @@@@@  @@@@@@  @@@@@@@@@@@@@@  @@@@@@@  @  @   @@@@@  @@@@    @@@@@@   @@   @@", text_colors["white"], bg_colors["red"])
+        colored_text("@@@@@@       @       @@       @@     @@@      @@@@@@@@       @@    @@   @@@      @@        @@        @@", text_colors["white"], bg_colors["red"])
+        colored_text("@@@@@@  @@@@ @  @@@  @@       @@     @@%     @@@@@@@@@      @@@    @@   @@@      @2        @@   @@   @@", text_colors["white"], bg_colors["red"])
+        colored_text("@@@@@@@ @@@@ @@ @@@   @  @@@@@@  @@@@@@  @@@@@@@@@@@@@  @@@@@@@  @  @   @@@@@  @@@@    @@@@@@   @@   @@", text_colors["white"], bg_colors["red"])
         colored_text("@@@@@@@      @@    @@@@       @@@@@  @@@@@@  *@@@@@@@@      %@@  @@  @  @@@@@  @@@@        @@       @@@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@   @@@@@  @@    @  @@@@@@     @@@     @@@@@@@@@@= @@@@@@@  @@@    @@@@@  @@@@    @@@@@@   @@   @@", text_colors["white"], bg_colors["red"])
+        colored_text("@@@@@@   @@@@@  @@    @  @@@@@@     @@@     @@@@@@@@@@  @@@@@@@  @@@    @@@@@  @@@@    @@@@@@   @@   @@", text_colors["white"], bg_colors["red"])
         colored_text("@@@@@@   @@@@@   @    @       @     @@@      @@@@@@@@@      @@@  @@@@   @@@@@  @@@@        @@   @@   @@", text_colors["white"], bg_colors["red"])
         colored_text("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", text_colors["white"], bg_colors["red"])
 
@@ -53,23 +53,14 @@ print("13)Best price calculator")
 print("14)flip a coin")
 print("15)random number generator")
 print("16)Exit")
-
 choice=input('Enter a choice of calculator: ')
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 if choice == "16":
        exit()
-R = int(input('How many decimal points do you want to round to? '))
-if choice in ['']:
-=======
+
 if choice in ['2','3','4','5','7','8','9','10','11']:
->>>>>>> Stashed changes
-=======
-if choice in ['2','3','4','5','7','8','9','10','11']:
->>>>>>> Stashed changes
         R = int(input('How many decimal points do you want to round to? '))
 else:
-       pass
+        pass
        
        
 
@@ -111,12 +102,12 @@ if choice=='10':
 if choice=='11':
         l.bullet(R)
 if choice=='12':
-        f.compoundinterest
+        f.compoundinterest()
 if choice=='13':
-        f.bestprice
+        f.bestprice()
 if choice=='14':
-        l.coin
+        l.coin()
 if choice=='15':
-        l.randomnumber
+        l.randomnumber()
 if choice=='16':
        exit()
