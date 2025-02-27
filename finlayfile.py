@@ -59,7 +59,7 @@ def circle(R):
                 time.sleep(1)
                 os.system('cls')
                 continue
-            if A <= 0:
+            if a <= 0:
                 print("That shape does not exist on the simple plain")
                 time.sleep(1)
                 os.system('cls')
@@ -85,6 +85,8 @@ def circle(R):
                 time.sleep(1)
                 os.system('cls')
                 continue
+            else:
+                shape =True
         C = 2*math.pi*r
         C = round(C,R)
         print(f"The answer is {C}")
@@ -93,7 +95,7 @@ def circle(R):
         shape = False
         while shape == False:
             try:
-                r = float(input("Enter radius of the circle"))
+                r = float(input("Enter radius of the circle: "))
             except:
                 print("Please enter a valid input")
                 time.sleep(1)
@@ -104,6 +106,8 @@ def circle(R):
                 time.sleep(1)
                 os.system('cls')
                 continue
+            else:
+                shape = True
         A = math.pi*r**2
         A = round(A,R)
         print(f"The answer is {A}")
@@ -509,4 +513,4 @@ def bestprice():
         print(f"You should keep you price the same")
 if  __name__ == "__main__":
     R = 2
-    compoundinterest() 
+    circle(R) 
