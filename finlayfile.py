@@ -323,7 +323,7 @@ def compoundinterest():
         while shape == False:
             try:
                 P = float(input("Please enter the deposited amount: "))
-                r = float(input("Please enter the interest rate: "))
+                r = float(input("Please enter the interest rate as a decimal: "))
                 n = float(input("Please enter the compounding rate: "))
                 t = float(input("Please enter the time in years: "))
             except:
@@ -339,8 +339,8 @@ def compoundinterest():
             else:
                 shape = True
         A = P*(1+(r/n))**(n*t)
-        A = round(A,2)
-        print(f"The answer is ${A}")
+        A = "%0.2f" % A
+        print(f"The future value is ${A}")
         return A
     if choice == 2:
         shape = False
@@ -350,8 +350,8 @@ def compoundinterest():
                 r = float(input("Please enter the interest rate as a decimal: "))
                 n = float(input("Please enter the number of compounds per year: "))
                 t = float(input("Please enter the time in years: "))
-                cr = float(input("Please enter the number of reaccuring contributions per year"))
-                ca = float(input("Please enter the reaccurring contribution amount"))
+                cr = float(input("Please enter the number of reaccuring contributions per year: "))
+                ca = float(input("Please enter the reaccurring contribution amount: "))
             except:
                 print("Please enter a valid input")
                 time.sleep(1)
@@ -364,22 +364,14 @@ def compoundinterest():
                 continue
             else:
                 shape = True
-        for i in range(int(t)):
-            if n >= cr:
-                for y in range(int(cr)):
-                    P += ca
-                    print(f"p = {P}")
-                    for x in range(math.floor((n/cr))):
-                        A = P*(1+r*(1/n))
-                        P = A
-                        print(f" a = {A}")
-            elif cr > n:
-                for y in range(math.floor(n)):
-                    A = P*r*(1/n)
-                    P = A
-                    for x in range(int(cr/n)):
-                        P += ca
-        print(f"{A}$")
+        m = int(n*cr*t)
+        for i in range(1,m+1):
+            if i % cr == 0:
+                P = P*(1+r/n)
+            if i % n == 0:
+                P += ca
+        Fv = "%0.2f" % P
+        print(f"The future value is ${Fv}")
 #5 
 def escapevelocity(R):
     import math
@@ -505,12 +497,15 @@ def bestprice():
     p2 = round(x*(cinP),2)
     R = round((P+cinP*x)*(S+cinS*x),2)
     pf = round(P+p2,2)
+    p2= "%0.2f" % p2
+    R = "%0.2f" % R
+    pf = "%0.2f" % pf
     if x > 0:
         print(f"You should increase your price by ${p2} to a total price of ${pf} for a predicted total revenue of ${R}")
     elif x < 0: 
         print(f"You should decrease you price by ${abs(p2)} to a total price of ${pf} for a predicted total revenue of ${R}")
     elif x == 0:
-        print(f"You should keep you price the same")
+        print(f"You should keep your price the same")
 if  __name__ == "__main__":
     R = 2
-    circle(R) 
+    bestprice()
