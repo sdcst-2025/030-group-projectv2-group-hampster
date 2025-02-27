@@ -1,9 +1,9 @@
-# creating a menu
-#first get the input number for that calculator you want and add a way to prevent wrong numbers, then add all the calculators to the menu and make it so you can select them. Lastly make the menu look good by adding things to it.
-import os,math
+import os
+import math
+import finlayfile as f
+import lucasfile as l
 
 def colored_text(text, text_color=30, bg_color=37):
-    
     print(f"\033[{text_color}m\033[{bg_color}m{text}\033[0m")
 
 text_colors = {
@@ -16,98 +16,90 @@ bg_colors = {
     "blue": 44, "magenta": 45, "cyan": 46, "white": 47
 }
 
-
 def title():
-        colored_text("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@       @       @@       @@     @@@      @@@@@@@@       @@    @@   @@@      @@        @@        @@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@  @@@@ @  @@@  @@       @@     @@%     @@@@@@@@@      @@@    @@   @@@      @2        @@   @@   @@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@@ @@@@ @@ @@@   @  @@@@@@  @@@@@@  @@@@@@@@@@@@@  @@@@@@@  @  @   @@@@@  @@@@    @@@@@@   @@   @@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@@      @@    @@@@       @@@@@  @@@@@@  *@@@@@@@@      %@@  @@  @  @@@@@  @@@@        @@       @@@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@   @@@@@  @@    @  @@@@@@     @@@     @@@@@@@@@@  @@@@@@@  @@@    @@@@@  @@@@    @@@@@@   @@   @@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@   @@@@@   @    @       @     @@@      @@@@@@@@@      @@@  @@@@   @@@@@  @@@@        @@   @@   @@", text_colors["white"], bg_colors["red"])
-        colored_text("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", text_colors["white"], bg_colors["red"])
-
+    colored_text("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", text_colors["white"], bg_colors["red"])
+    colored_text("@@@@@@       @       @@       @@     @@@      @@@@@@@@       @@    @@   @@@      @@        @@        @@", text_colors["white"], bg_colors["red"])
+    colored_text("@@@@@@  @@@@ @  @@@  @@       @@     @@%     @@@@@@@@@      @@@    @@   @@@      @2        @@   @@   @@", text_colors["white"], bg_colors["red"])
+    colored_text("@@@@@@@ @@@@ @@ @@@   @  @@@@@@  @@@@@@  @@@@@@@@@@@@@  @@@@@@@  @  @   @@@@@  @@@@    @@@@@@   @@   @@", text_colors["white"], bg_colors["red"])
+    colored_text("@@@@@@@      @@    @@@@       @@@@@  @@@@@@  *@@@@@@@@      %@@  @@  @  @@@@@  @@@@        @@       @@@", text_colors["white"], bg_colors["red"])
+    colored_text("@@@@@@   @@@@@  @@    @  @@@@@@     @@@     @@@@@@@@@@  @@@@@@@  @@@    @@@@@  @@@@    @@@@@@   @@   @@", text_colors["white"], bg_colors["red"])
+    colored_text("@@@@@@   @@@@@   @    @       @     @@@      @@@@@@@@@      @@@  @@@@   @@@@@  @@@@        @@   @@   @@", text_colors["white"], bg_colors["red"])
+    colored_text("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", text_colors["white"], bg_colors["red"])
 title()
 
 input("")
 os.system('cls')
 
-import finlayfile as f
-import lucasfile as l
+def main():
+    while True:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("*List of calculators*")
+        print("1) Instructions")
+        print("2) Rectangle calculator")
+        print("3) Volume of sphere calculator")
+        print("4) Circle calculator")
+        print("5) Triangle calculator")
+        print("6) Simple interest calculator")
+        print("7) Triangular prism calculator")
+        print("8) Cylinder calculator")
+        print("9) Rectangular prism calculator")
+        print("10) Escape velocity calculator")
+        print("11) Bullet energy calculator")
+        print("12) Compound interest calculator")
+        print("13) Best price calculator")
+        print("14) Flip a coin")
+        print("15) Random number generator")
+        print("16) Exit")
+        
+        choice = input("Enter a choice of calculator: ")
+        
+        if choice == "16":
+            print("Exiting program")
+            break
+        
+        if choice in ['2', '3', '4', '5', '7', '8', '9', '10', '11']:
+            try:
+                R = int(input("How many decimal points do you want to round to? "))
+            except ValueError:
+                print("Invalid input. Please enter a number.")
+                continue
+        
+        if choice == '1':
+            print("Instructions: Enter one of the numbers listed to use that calculator, or select exit to quit.")
+        elif choice == '2':
+            l.rectangle(R)
+        elif choice == '3':
+            l.volsphere(R)
+        elif choice == '4':
+            f.circle(R)
+        elif choice == '5':
+            f.triangle(R)
+        elif choice == '6':
+            l.simpleinterest()
+        elif choice == '7':
+            f.triangularprism(R)
+        elif choice == '8':
+            l.cylinder(R)
+        elif choice == '9':
+            l.rectangularprism(R)
+        elif choice == '10':
+            f.escapevelocity(R)
+        elif choice == '11':
+            l.bullet(R)
+        elif choice == '12':
+            f.compoundinterest()
+        elif choice == '13':
+            f.bestprice()
+        elif choice == '14':
+            l.coin()
+        elif choice == '15':
+            l.randomnumber()
+        else:
+            print("Invalid choice. Please enter a valid number.")
+        
+        input("Press Enter to go back to menu.")
+        
+if __name__ == "__main__":
+    main()
 
 
-print("*list of calculators*")
-print("1)Instructions")
-print("2)Rectangle calculator")
-print("3)Volume of sphere calculator")
-print("4)Circle calculator")
-print("5)Triangle calculator")
-print("6)Simple interest calculator")
-print("7)Triangular prism calculator")
-print("8)Cylinder calculator")
-print("9)Rectangular prism claculator")
-print("10)Escape velocity calculator")
-print("11)Bullet energy calculator")
-print("12)Compound interest calculator")
-print("13)Best price calculator")
-print("14)flip a coin")
-print("15)random number generator")
-print("16)Exit")
-choice=input('Enter a choice of calculator: ')
-if choice == "16":
-       exit()
-
-if choice in ['2','3','4','5','7','8','9','10','11']:
-        R = int(input('How many decimal points do you want to round to? '))
-else:
-        pass
-       
-       
-
-def rounded_value():
-    try:
-        rnum = int(input("How many decimal places do you want? "))
-        if rnum < 0:
-            print("Decimal places cannot be negative.")
-            return None
-        R = round(R, rnum)
-        return R
-    except ValueError:
-        print("Invalid input. Please enter a non-negative integer.")
-        return None
-
-
-
-
-if choice=='1':
-      print("instructions: enter one of the numbers listed to relocate to that calculator, or to exit.\n The calculator will not work if you enter an invalid number\n...")
-if choice=='2':
-        l.rectangle(R)
-if choice=='3':
-        l.volsphere(R)
-if choice=='4':
-        f.circle(R)
-if choice=='5':
-        f.triangle(R)
-if choice=='6':
-        l.simpleinterest()
-if choice=='7':
-        f.triangularprism(R)
-if choice=='8':
-        l.cylinder(R)
-if choice=='9':
-        l.rectangularprism(R)
-if choice=='10':
-        f.escapevelocity(R)
-if choice=='11':
-        l.bullet(R)
-if choice=='12':
-        f.compoundinterest()
-if choice=='13':
-        f.bestprice()
-if choice=='14':
-        l.coin()
-if choice=='15':
-        l.randomnumber()
-if choice=='16':
-       exit()
