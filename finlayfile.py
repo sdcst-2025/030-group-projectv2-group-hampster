@@ -302,6 +302,7 @@ def compoundinterest():
     import math
     import os
     import time
+    os.system('cls')
     val = False
     while val == False:
         print("-------------------------\nPlease make a selection\n-------------------------")
@@ -377,6 +378,7 @@ def escapevelocity(R):
     import math
     import os
     import time
+    os.system('cls')
     val = False
     while val == False:
         print("-------------------------\nPlease make a selection\n-------------------------")
