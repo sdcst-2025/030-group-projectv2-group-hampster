@@ -1,19 +1,3 @@
-'''
-List of calculators:
-    circle - Finlay
-    rectangle - Lucas
-    triangle - Finlay
-    volume sphere - Lucas
-    volume triangular prism - Finlay
-    volume rectangular prism - Lucas
-    compound interest w/ reacuring input - Finlay
-    simple interest with reacurring input - Lucas
-    loan with compound interest interest and reacurring payment - Last person
-    Best price calculator - Finlay
-    Gravitation time dilation calculator - Lucas
-    Escape velocity calculator - Finlay
-    cylinder - Lucas
-    '''
 import os, math, random, time
 
 def rectangle(R):
@@ -429,39 +413,3 @@ def randomnumber():
 
 if __name__ == "__main__":
     pass
-
-
-'''
-TEMPLATE FOR FUNCTIONS:
-    os.system('cls')
-    picked = 0
-    while picked == 0:
-        print('-------------------------\nPlease make a selection: \n-------------------------')
-        print('To solve for the , type "1"')
-        print('To solve for the , type "2"')
-        print('To solve for the , type "3"')
-        try:
-            choice = int(input(""))
-            if choice > 0 and choice < 4:
-                picked = 1
-                os.system('cls')
-            else:
-                os.system('cls')
-                print('You didn\'t select an option.')
-        except:
-            os.system('cls')
-            print('You didn\'t select an option.')
-    if choice == 1:
-        pass
-    if choice == 2:
-        pass
-    if choice == 3:
-        pass
-    os.system('cls')
-    ans = round(ans, 2)
-    print(f"The answer is {ans}.")
-    return
-
-
-
-'''
