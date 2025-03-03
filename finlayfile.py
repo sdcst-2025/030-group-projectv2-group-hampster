@@ -1,10 +1,3 @@
-"""circle - Finlay
-triangle - Finlay
-volume triangular prism - Finlay
-compound interest w/ reacuring input - Finlay
-loan with compound interest interest and reacurring payment - Last person
-Best price calculator - Finlay
-Escape velocity calculator - Finlay"""
 
 """Template: 
     import math
