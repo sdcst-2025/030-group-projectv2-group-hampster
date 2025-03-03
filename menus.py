@@ -2,7 +2,6 @@ import os
 import math
 import finlayfile as f
 import lucasfile as l
-import wimfile as w
 
 def colored_text(text, text_color=30, bg_color=37):
     print(f"\033[{text_color}m\033[{bg_color}m{text}\033[0m")
@@ -95,8 +94,6 @@ def main():
             l.coin()
         elif choice == '15':
             l.randomnumber()
-        elif choice == '17':
-            w.adventure()
         
         else:
             print("Invalid choice. Please enter a valid number.")
@@ -104,5 +101,3 @@ def main():
         
 if __name__ == "__main__":
     main()
-
-
